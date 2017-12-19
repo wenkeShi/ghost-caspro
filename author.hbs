@@ -1,0 +1,45 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#author}}
+{{!-- Everything inside the #author tags pulls data from the author --}}
+<header class="site-header outer {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+        {{> "site-nav"}}
+        <div class="site-header-content">
+            {{#if profile_image}}
+                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+            {{/if}}
+            <h1 class="site-title">{{name}}</h1>
+            {{#if bio}}
+                <h2 class="author-bio">{{bio}}</h2>
+            {{/if}}
+            <h2 class="site-description">{{@blog.description}}</h2>    
+            <div class="author-meta">
+      {{!--           {{#if location}}
+                    <div class="author-location">{{location}} <span class="bull">&bull;</span></div>
+                {{/if}} --}}
+                <div class="author-stats">
+                    共{{plural ../pagination.total empty='0' plural='%' singular='%' }}篇文章
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{/author}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+    </div>
+</main>

@@ -1,0 +1,157 @@
+
+
+
+//home page style
+html{
+	height: 100%;
+}
+.home-template .site-header{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+
+.social-nav{
+	font-family: 'iconfont';
+	text-decoration: none;
+	display: flex;
+	justify-content : center;
+	align-items : center;
+}
+.social-nav ul{
+	margin: 20px 0 0 0;
+	list-style: none;
+	font-size: 2em;
+	display: flex;
+	justify-content : center;
+	align-items : center;
+}
+.social-nav li{
+	padding-left: 1em;
+	color : #eee;
+}
+.social-nav a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+@media (max-width: 700px){
+	.social-nav ul a{
+		font-size: 2rem;
+	}
+}
+
+//author-template  博客页面
+// .author-template .site-nav{
+// 	width: 100%;
+// 	background-color: rgba(0, 0, 0, 0.3)
+// }
+// .author-template .nav{
+// 	width: 90%;
+// 	display: flex;
+// 	justify-content : center;
+// 	align-items : center;
+// 	list-style : none;
+// }
+// .author-template .nav li{
+// 	flex : 1 1;
+// 	text-align: center;
+// 	height: 50px;
+// 	line-height: 50px;
+// 	padding : 0;
+// 	margin : 0;
+// 	font-size: 1.3em;
+// }
+// .author-template .nav a:hover{
+// 	text-decoration: none;
+// }
+
+// post-card style
+// .post-card .post-card-image-link:hover{
+// 	text-decoration: none !important;
+// }
+
+.post-card-image-time{
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.2);
+	color: #fff;
+	text-decoration: none;
+}
+
+.post-card-image{
+	display: flex;
+	align-items : flex-end;
+}
+
+.post-card-date{
+	height: 200px;
+	width: 100%;
+	background-color: #34cba3;
+	color: #fff;
+	display: flex;
+	justify-content : center;
+	align-items : center;
+	flex-wrap : wrap;
+}
+
+.post-card-date:hover{
+	background-color: #61debd;
+	text-decoration: none;
+}
+
+.post-card-month,
+.post-card-day,
+.post-card-weekday,
+.post-card-year{
+	flex : 1 1 100%;
+	text-align: center;
+}
+
+.post-card-weekday{
+	align-self: flex-start;		
+}
+
+.post-card-day time{
+	font-size: 50px;
+	border-bottom: 1px solid #fff;
+}
+
+.post-card-year{
+	align-self : flex-end;
+	font-size: 12px;
+}
+
+.post-card-excerpt {
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    color: #6e6e6e;
+}
+
+.post-card-meta{
+	padding-top: 10px;
+}
+
+.post-card-tags{
+	display: inline-block;
+	background-color: #34cba3;
+	color: #fff;
+	margin: 0 5px;
+	height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+@media (min-width 795px) {
+ .home-template .post-feed .post-card:nth-child(6n+1) .post-card-date{
+    flex: 1 1 100%;
+    flex-direction: row;
+	}
+}

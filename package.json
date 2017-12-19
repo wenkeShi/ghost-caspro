@@ -1,0 +1,47 @@
+{
+    "name": "caspro",
+    "description": "base on the theme casper",
+    "demo": "http://xinwenke.top",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=1.2.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "wenke",
+        "email": "swenke@foxmail.com",
+        "url": "http://xinwenke.top"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "caspro"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wenkeShi/ghost-caspro.git"
+    },
+    "bugs": "https://github.com/wenkeShi/ghost-caspro/issues",
+    "devDependencies": {
+        "autoprefixer": "6.3.6",
+        "cssnano": "3.7.1",
+        "gulp": "3.9.1", 
+        "gulp-livereload": "3.8.1",
+        "gulp-nodemon": "2.1.0",
+        "gulp-postcss": "6.1.1",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-util": "3.0.7",
+        "gulp-watch": "4.3.8",
+        "gulp-zip": "4.0.0",
+        "postcss-color-function": "2.0.1",
+        "postcss-custom-properties": "5.0.1",
+        "postcss-easy-import": "1.0.1"
+    },
+    "config": {
+        "posts_per_page": 6
+    }
+}

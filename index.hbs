@@ -1,0 +1,36 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {{!-- {{#if @blog.logo}}
+                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}} --}}
+                {{@blog.title}}
+            </h1>
+            {{!-- <h2 class="site-description">{{@blog.description}}</h2> --}}
+            <h2 class="author-name">Wenke</h2>
+        </div>
+
+        {{> "site-nav"}}
+
+        <div class="social-nav">
+            <ul>
+                <li><a href="https://github.com/wenkeShi" title="github" target="_blank">&#xe700;</a></li>
+                <li><a href="http://www.jianshu.com/u/a95536c856b6" title="简书" target="_blank">&#xe669;</a></li>
+                <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=FiciJiInJyIiLiVWZ2c4dXl7" title="email" target="_blank">&#xe60c;</a></li>
+                <li>
+                    <a title="QQ" class="qq-nav">&#xe644;</a>
+                    <div class="qrcode"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+    

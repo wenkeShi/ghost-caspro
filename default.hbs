@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" /> --}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. --}}
+    
+    {{{block "links"}}}
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+
+    <div class="site-wrapper">
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The footer at the very bottom of the screen --}}
+        <footer class="site-footer outer ">
+            <div class="site-footer-content inner">
+                {{^is "index, home"}}
+                    <div class="site-footer-top">
+                        <section class="site-tag-block">
+                            {{> "tag_block"}}
+                        </section>
+                    </div>
+                {{/is}}
+                <div class="site-footer-bottom">
+                    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} · All rights reserved.</section>
+                    <div class="author-info">
+                        Theme <a href="https://github.com/wenkeShi" target="_blank">caspro</a> by @ <a href="{{@blog.url}}">wenke</a>
+                        <a class="star-github" href="https://github.com/wenkeShi" target="_blank"><i>&#xe700;</i>Star</a>
+                    </div>
+                    <nav class="site-footer-nav">
+                        <a href="http://winwenke.top/author/wenke">Latest Posts</a>
+                        <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
+    {{!-- {{debug pagination}} --}}
+
+    {{#if pagination.pages}}
+    <script>
+        var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+        <script src="{{asset "js/infinitescroll.js"}}"></script>
+    {{/if}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>
