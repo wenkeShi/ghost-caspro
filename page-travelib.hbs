@@ -1,2 +1,58 @@
-<h3>Welcome!</h3>
-<p>流动图书馆为一款微信小程序，目前正在紧张上线中...</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>流动图书馆</title>
+	<style type="text/css">
+		html,
+		body{
+			margin : 0;
+			padding: 0;
+			height: 100%;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: #34cba3;
+			color: #fff;
+		}
+		.desc{
+			text-align: center;
+		}
+		.dot{
+			animation: dotcycle 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function : linear;
+			display: inline-block;
+			width: 1.5rem;
+			white-space: nowrap;
+			overflow : hidden;
+		}
+		@keyframes dotcycle{
+ 			0% {
+				width: 0rem;
+ 			}
+ 			50%{
+ 				width: 0.8rem;
+ 			}
+ 			100%{
+ 				width: 1.5rem;
+ 			}
+		}
+	</style>
+</head>
+<body>
+	<header>Welcome!</header>
+	<article class="travelib-profile">
+		<h3>流动图书馆为一款微信小程序</h3>
+		<p class="desc">目前正在紧张上线中
+			<span class="dot">. . .</span>
+{{!-- 			<span class="dot">.</span>
+			<span class="dot">.</span> --}}
+		</p>
+	</article>
+</body>
+</html>
+
+
