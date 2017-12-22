@@ -58,16 +58,18 @@
     </div>
 
 
+
+    {{^ is 'index,home'}}
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
     {{!-- {{debug pagination}} --}}
-    {{^ is 'index,home'}}
+    
         {{#if pagination.pages}}
             <script>
                 var maxPages = parseInt('{{pagination.pages}}');
