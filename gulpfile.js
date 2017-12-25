@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 
 // gulp plugins and utils
-var gutil = require('gulp-util');
-var livereload = require('gulp-livereload');
-var nodemon = require('gulp-nodemon');
+
+
+
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
@@ -15,18 +15,9 @@ var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
 
-var swallowError = function swallowError(error) {
-    gutil.log(error.toString());
-    gutil.beep();
-    this.emit('end');
-};
-
-var nodemonServerInit = function () {
-    livereload.listen(1234);
-};
 
 gulp.task('build', ['css'], function (/* cb */) {
-    return nodemonServerInit();
+   console.log('building...');
 });
 
 gulp.task('css', function () {
@@ -39,12 +30,10 @@ gulp.task('css', function () {
     ];
 
     return gulp.src('assets/css/*.css')
-        .on('error', swallowError)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
-        .pipe(livereload());
+        .pipe(gulp.dest('assets/built/'));
 });
 
 gulp.task('watch', function () {
