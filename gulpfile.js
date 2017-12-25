@@ -2,8 +2,6 @@ var gulp = require('gulp');
 
 // gulp plugins and utils
 
-
-
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
