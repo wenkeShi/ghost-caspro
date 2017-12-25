@@ -165,6 +165,13 @@ body {
     color: #fff;
 }
 @media (max-width: 700px){
+    .home-template .site-nav .nav{
+        width: 100%;
+        margin: 0;
+    }
+    .home-template .nav li{
+        line-height: inherit;
+    }
     .social-nav ul a{
         font-size: 2rem;
     }
