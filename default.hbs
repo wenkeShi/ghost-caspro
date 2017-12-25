@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" /> --}}
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. --}}
@@ -66,6 +66,7 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous">
         </script>
+        <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
     {{!-- {{debug pagination}} --}}
     
