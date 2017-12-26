@@ -11,3 +11,6 @@ caspro主题是ghost博客系统的一款主题，基于casper。
 - 在后台添加两篇能作为单独页面的文章。设置其URL分别为 travelib、resume
 - 或者自定义单独页面的URL,然后创建 page-URL.hbs 模板文件，里面的内容自己添加
 - 在后台配置导航栏为自定义文章的URL。
+
+
+[demo](http://xinwenke.top)
