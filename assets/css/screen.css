@@ -420,7 +420,8 @@ align-items : center; */
     border-radius: 19px;
 }
 .home-template .nav li a{
-    padding: 5px 15px;
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 /* .home-template .nav li a {
