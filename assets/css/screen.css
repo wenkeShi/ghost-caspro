@@ -192,7 +192,8 @@ body {
         margin-left: -50%;
     }
     .social-nav .qq-nav:hover + .qrcode{
-        height: 300px;
+        height: 250px;
+        width: 250px;
         opacity: 1;
         visibility: visible;
     }
@@ -405,6 +406,7 @@ align-items : center; */
 .home-template .site-nav{
     justify-content : center;
     height: auto;
+    overflow-x: hidden;
 }
 .home-template .nav {
     margin: 0 0 0 5px;
