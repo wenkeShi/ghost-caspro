@@ -1,0 +1,63 @@
+html,
+body{
+	margin : 0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// flex-direction: column;
+	background-color: #34cba3;
+	color: #fff;
+}
+/*		.desc{
+			text-align: center;
+		}
+		.dot{
+			animation: dotcycle 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function : linear;
+			display: inline-block;
+			width: 1.5rem;
+			white-space: nowrap;
+			overflow : hidden;
+		}
+		@keyframes dotcycle{
+ 			0% {
+				width: 0rem;
+ 			}
+ 			50%{
+ 				width: 0.8rem;
+ 			}
+ 			100%{
+ 				width: 1.5rem;
+ 			}
+		}*/
+.travelib-profile{
+	height: 280px;
+	margin-right: 2rem;
+	font-size: 1.1rem;
+}
+h3{
+	font-size: 1.3rem;
+}
+.desc{
+	max-width: 250px;
+}	
+.travelib-code{
+  width: 250px;
+  height: 280px;
+	background: url('../images/travelib_code.jpg') no-repeat;
+	background-size: cover;
+}
+@media (max-width: 750px) {
+	body{
+		flex-direction: column;
+	}
+	.travelib-profile{
+		height: auto;
+		margin: 0;
+	}
+}
