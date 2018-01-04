@@ -28,7 +28,8 @@ caspro主题简洁美观，采用响应式设计，能很好的适配不同设�
 - 可添加其他导航项，设置为想要跳转的URL
 - 如果想要跳转到自定义的页面，需要在后台添加两篇能作为单独页面的文章。设置导航URL分别为两篇文章的URL
 - 创建 page-URL.hbs 模板文件，这个文件即是自定义页面的模板文件。如：我在后台添加了单独页面的文章，设置其URL为http://localhost/travelib。
-这样点击导航项即可跳转到page-travelib.hbs模板生成的页面。则需要创建page-travelib.hbs文件，然后在导航栏添加travelib一项，设置其链接为http://localhost/travelib。这样点击导航项即可跳转到page-travelib.hbs模板生成的页面。
+则需要创建page-travelib.hbs文件，然后在导航栏添加travelib一项，设置其链接为http://localhost/travelib。
+这样点击导航项即可跳转到page-travelib.hbs模板生成的页面。
 
 下面是参考：
 1.作为单独页面的文章
