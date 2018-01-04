@@ -1,9 +1,29 @@
-caspro主题是ghost博客系统的一款主题，基于casper。
+caspro主题简洁美观，采用响应式设计，能很好的适配不同设备。
+# 1. 必要条件
+- ghost博客1.x
+# 2.预览
+[demo](http://xinwenke.top)
+> 首页
 
-**必须条件**
-- ghost版本1.x
+![home.png](http://upload-images.jianshu.io/upload_images/7234109-62bfe9e047dbd703.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**正常运行的步骤**
+> blog文章主页
+
+![blog.png](http://upload-images.jianshu.io/upload_images/7234109-dd8590ca5c92f139.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+> 文章page
+
+![page1.png](http://upload-images.jianshu.io/upload_images/7234109-2a61d4057c96cade.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![page2.png](http://upload-images.jianshu.io/upload_images/7234109-426819f9b665fe14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![page3.png](http://upload-images.jianshu.io/upload_images/7234109-d4a96bf956960fc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+# 3.正常运行主题的步骤
+
+[下载](https://github.com/wenkeShi/ghost-caspro)主题zip压缩包之后，
+
 
 - 登录后台管理
 - 在Team栏找到自己的账号，查看对应的链接
