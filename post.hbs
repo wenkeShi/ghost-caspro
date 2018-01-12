@@ -151,7 +151,7 @@ into the {body} of the default.hbs template --}}
 {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
 {{> floating-header}}
 
-<div class="top"><a href="#top">&#xe60e;</a></div>
+<div class="top"><a href="">&#xe60e;</a></div>
 
 {{/post}}
 
@@ -224,9 +224,17 @@ $(document).ready(function () {
             $('.top').removeClass('show');
         }
     });
-    // window.addEventListener('scroll',function(event){
-    //     console.log(event);
-    // });
+    var toTop = document.getElementsByClassName('top')[0];
+    toTop.addEventListener('click', function(e){
+        e.preventDefault();
+        var scroll = setInterval(function(){
+                        if(window.scrollY>100){
+                            window.scrollBy(0, -200);
+                        }else{
+                            clearInterval(scroll);
+                        }
+                    },10);
+    });
     update();
 });
 
