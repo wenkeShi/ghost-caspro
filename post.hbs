@@ -151,7 +151,7 @@ into the {body} of the default.hbs template --}}
 {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
 {{> floating-header}}
 
-<div class="top"><a href="">&#xe60e;</a></div>
+<div id="top"><a href="">&#xe60e;</a></div>
 
 {{/post}}
 
@@ -219,12 +219,12 @@ $(document).ready(function () {
 
     $(window).scroll(function(){
         if($(window).scrollTop()>1000){
-            $('.top').addClass('show');
+            $('#top').addClass('show');
         }else{
-            $('.top').removeClass('show');
+            $('#top').removeClass('show');
         }
     });
-    var toTop = document.getElementsByClassName('top')[0];
+    var toTop = document.getElementsById('top');
     toTop.addEventListener('click', function(e){
         e.preventDefault();
         var scroll = setInterval(function(){
